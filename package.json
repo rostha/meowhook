@@ -1,0 +1,52 @@
+{
+  "name": "meowhook",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "overrides": {
+    "zod": "^4.6.7"
+  },
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "vitest run && next build --webpack && node scripts/exclude-local-data.mjs && node scripts/verify-build.mjs",
+    "verify:package": "node scripts/verify-build.mjs",
+    "start": "next start",
+    "lint": "tsc -p tsconfig.lint.json --noEmit",
+    "test": "vitest run",
+    "release:check": "node scripts/verify-public-source.mjs",
+    "release:export": "node scripts/export-public-source.mjs"
+  },
+  "dependencies": {
+    "@codemirror/lang-json": "^6.0.2",
+    "@js-temporal/polyfill": "^0.5.1",
+    "@skyra/discord-components-core": "^4.0.2",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vercel/blob": "^2.8.2",
+    "better-auth": "^1.7.13",
+    "codemirror": "^6.0.2",
+    "framer-motion": "^12.38.0",
+    "kysely": "^0.29.7",
+    "nanoid": "^5.1.16",
+    "next": "^16.4.3",
+    "pg": "^8.23.1",
+    "postcss": "^8.5.31",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.11",
+    "@playwright/test": "^1.58.2",
+    "@types/pg": "^8.23.1",
+    "sharp": "^0.35.5",
+    "vitest": "^4.1.12"
+  },
+  "license": "Apache-2.0"
+}

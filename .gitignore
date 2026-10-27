@@ -1,0 +1,66 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# production
+build/
+dist/
+
+# env files
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# playwright
+playwright-report/
+test-results/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+
+# misc
+.DS_Store
+Thumbs.db
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite*
+*.db
+*.db-*
+*.tsbuildinfo
+.data/
+
+# local browser verification
+.playwright-cli/
+.playwright-mcp/
+output/
+.codex/
+.cursor/
+.impeccable/
+.npmrc
+.git-credentials
+
+# private development notes and scratch artifacts (kept locally)
+/CONTEXT.md
+/MEMORY.md
+/actualcontext.md
+/whatdidido.md
+/miscohook_spec.md
+/AUDIT.md
+/DESIGN.md
+/src/app/docs/DESIGN.md
+/docs/FEATURE_AUDIT.md
+/lint_results.txt
+/*.log
+/*.png
+/check.mjs
+/run-br*.js
+/test-*.js
+/test-br*.html
